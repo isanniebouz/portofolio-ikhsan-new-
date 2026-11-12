@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikhsan Mulia Apriana | Junior Web Developer Portfolio</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Portofolio Ikhsan Mulia Apriana, Junior Web Developer lulusan SMKN 1 Kawali jurusan Rekayasa Perangkat Lunak (RPL).">
+  <meta name="keywords" content="Ikhsan Mulia Apriana, Junior Web Developer, SMKN 1 Kawali, Rekayasa Perangkat Lunak, HTML, CSS, PHP, Laravel, Bootstrap, MySQL">
+  <meta name="author" content="Ikhsan Mulia Apriana">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            },
+            darkbg: '#0b0f19',
+            carddark: '#111827',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#0b0f19] text-slate-100 transition-colors duration-300 relative selection:bg-blue-500 selection:text-white">
+
+  <!-- BACKGROUND GLOW EFFECTS -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 glow-blob glow-blue"></div>
+  <div class="fixed bottom-1/4 right-10 w-96 h-96 glow-blob glow-cyan"></div>
+  <div class="fixed top-2/3 left-10 w-80 h-80 glow-blob glow-purple"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="#beranda" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+            IMA
+          </div>
+
+          <div class="flex flex-col">
+            <span class="font-extrabold text-lg tracking-tight group-hover:text-blue-400 transition-colors">
+              Ikhsan<span class="text-cyan-400">.dev</span>
+            </span>
+            <span class="text-[11px] text-slate-400 font-mono">Junior Web Developer</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#beranda" class="nav-link hover:text-blue-400 transition-colors py-1">Beranda</a>
+          <a href="#tentang" class="nav-link hover:text-blue-400 transition-colors py-1">Tentang Saya</a>
+          <a href="#keahlian" class="nav-link hover:text-blue-400 transition-colors py-1">Keahlian</a>
+          <a href="#pendidikan" class="nav-link hover:text-blue-400 transition-colors py-1">Pendidikan</a>
+          <a href="#sertifikasi" class="nav-link hover:text-blue-400 transition-colors py-1">Sertifikasi</a>
+          <a href="#project" class="nav-link hover:text-blue-400 transition-colors py-1">Project</a>
+          <a href="#kontak" class="nav-link hover:text-blue-400 transition-colors py-1">Kontak</a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="flex items-center gap-3">
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" aria-label="Ganti Tema" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-300 flex items-center justify-center transition-all duration-200">
+            <i id="theme-icon" class="fas fa-sun text-yellow-400"></i>
+          </button>
+
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/6288298381231?text=Halo%20Ikhsan,%20saya%20tertarik%20dengan%20profil%20portfolio%20kamu!" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold text-sm shadow-md shadow-blue-500/20 hover:shadow-cyan-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <i class="fab fa-whatsapp text-base"></i>
+            <span>Hubungi</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-300 flex items-center justify-center">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-slate-800 px-4 pt-3 pb-6 space-y-2">
+      <a href="#beranda" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Beranda</a>
+      <a href="#tentang" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Tentang Saya</a>
+      <a href="#keahlian" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Keahlian & Teknologi</a>
+      <a href="#pendidikan" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Pendidikan</a>
+      <a href="#sertifikasi" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Sertifikasi</a>
+      <a href="#project" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Project</a>
+      <a href="#kontak" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium hover:bg-slate-800/60 hover:text-blue-400">Kontak</a>
+
+      <div class="pt-3 border-t border-slate-800 flex gap-2">
+        <a href="https://wa.me/6288298381231" target="_blank" class="flex-1 text-center py-2.5 px-3 rounded-lg bg-emerald-600 text-white font-medium text-sm flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i> Chat WhatsApp
+        </a>
+        <a href="mailto:muliaikhsan41@gmail.com" class="flex-1 text-center py-2.5 px-3 rounded-lg bg-blue-600 text-white font-medium text-sm flex items-center justify-center gap-2">
+          <i class="fas fa-envelope"></i> Kirim Email
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="beranda" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 text-center lg:text-left" data-aos="fade-right" data-aos-duration="900">
+
+          <!-- Badges -->
+          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-6">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs sm:text-sm font-semibold tracking-wide">
+              <i class="fas fa-graduation-cap"></i> JUNIOR WEB DEVELOPER
+            </span>
+
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-green"></span>
+              Terbuka untuk Kesempatan Kerja
+            </span>
+          </div>
+
+          <!-- Main Name -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-4">
+            Halo, Saya <br class="hidden sm:inline">
+            <span class="gradient-text">Ikhsan Mulia Apriana</span>
+          </h1>
+
+          <!-- Animated Subtitle -->
+          <div class="h-10 sm:h-12 flex items-center justify-center lg:justify-start text-lg sm:text-2xl font-semibold text-slate-300 font-mono mb-6">
+            <span class="text-cyan-400 mr-2">&gt;</span>
+            <span id="typing-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <!-- Description -->
+          <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+            Lulusan <strong class="text-slate-200">SMKN 1 Kawali</strong> jurusan
+            <strong class="text-slate-200">Rekayasa Perangkat Lunak (RPL)</strong>
+            dengan kemampuan dalam pengembangan aplikasi dan website. Memiliki semangat belajar tinggi, berpikir logis dan kreatif dalam menyelesaikan masalah, teliti, serta mampu bekerja sama dalam tim.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="https://wa.me/6288298381231?text=Halo%20Ikhsan,%20saya%20melihat%20portfolio%20kamu!" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-xl shadow-blue-500/25 hover:shadow-cyan-500/35 hover:-translate-y-0.5 transition-all flex items-center gap-2.5">
+              <i class="fab fa-whatsapp text-lg text-green-300"></i>
+              <span>Hubungi via WhatsApp</span>
+            </a>
+
+            <a href="#project" class="px-6 py-3.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-semibold text-sm hover:text-white transition-all flex items-center gap-2">
+              <i class="fas fa-laptop-code text-blue-400"></i>
+              <span>Lihat Project</span>
+            </a>
+
+            <a href="#kontak" class="px-4 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium text-sm hover:text-cyan-400 transition-all flex items-center gap-2">
+              <i class="fas fa-paper-plane text-xs"></i>
+              <span>Kirim Pesan</span>
+            </a>
+          </div>
+
+          <!-- Fast Contact -->
+          <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-400">
+
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-slate-800/90 flex items-center justify-center text-blue-400 border border-slate-700">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <div>
+                <span class="block text-slate-500 text-[10px]">No. Telepon / WhatsApp</span>
+                <span class="font-mono text-slate-300 font-medium">0882-9838-1231</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-slate-800/90 flex items-center justify-center text-cyan-400 border border-slate-700">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <div>
+                <span class="block text-slate-500 text-[10px]">Email</span>
+                <span class="font-mono text-slate-300 font-medium">muliaikhsan41@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-slate-800/90 flex items-center justify-center text-amber-400 border border-slate-700">
+                <i class="fas fa-laptop-code"></i>
+              </span>
+              <div>
+                <span class="block text-slate-500 text-[10px]">Posisi</span>
+                <span class="text-slate-300 font-medium">Junior Web Developer</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hero Photo -->
+        <div class="lg:col-span-5 flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative w-full max-w-sm sm:max-w-md">
+
+            <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 rounded-3xl blur-2xl opacity-40 animate-pulse"></div>
+
+            <div class="profile-frame relative z-10 bg-slate-900 aspect-[9/14] sm:aspect-[9/13] w-full overflow-hidden">
+              <img
+                src="assets/img/profile.jpg"
+                alt="Foto Profil Ikhsan Mulia Apriana"
+                class="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[1.02] hover:scale-105 transition-transform duration-500"
+                loading="eager"
+              >
+
+              <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-20">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="text-white font-bold text-lg leading-tight">Ikhsan Mulia Apriana</h3>
+                    <p class="text-xs text-cyan-300 font-mono mt-0.5">Junior Web Developer</p>
+                  </div>
+
+                  <span class="px-2.5 py-1 rounded-full bg-blue-500/30 border border-blue-400/40 text-blue-300 text-xs font-semibold backdrop-blur-md">
+                    2024 – 2027
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="floating-badge-delay absolute -bottom-5 -right-4 sm:-right-6 z-30 p-3 sm:p-3.5 rounded-2xl glass-card shadow-2xl flex items-center gap-3 border border-cyan-500/30">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg shadow-inner">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <span class="text-[11px] uppercase tracking-wider text-cyan-400/90 font-bold block">Kompetensi</span>
+                <span class="text-xs sm:text-sm font-bold text-white">Rekayasa Perangkat Lunak</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK STATS BAR -->
+  <section class="relative py-8 border-y border-slate-800/80 bg-slate-900/40 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+        <div class="p-4 rounded-xl glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 mb-1">2024–2027</div>
+          <div class="text-xs text-slate-400 font-medium">Pendidikan SMKN 1 Kawali</div>
+        </div>
+
+        <div class="p-4 rounded-xl glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 mb-1">RPL</div>
+          <div class="text-xs text-slate-400 font-medium">Rekayasa Perangkat Lunak</div>
+        </div>
+
+        <div class="p-4 rounded-xl glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 mb-1">2 Project</div>
+          <div class="text-xs text-slate-400 font-medium">Pengalaman Pengembangan Web</div>
+        </div>
+
+        <div class="p-4 rounded-xl glass-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 mb-1">UKK</div>
+          <div class="text-xs text-slate-400 font-medium">Uji Kompetensi Keahlian</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="tentang" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+          PROFIL & BIOGRAFI
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Mengenal <span class="gradient-text">Ikhsan Mulia Apriana</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Lulusan Rekayasa Perangkat Lunak yang berkomitmen mengembangkan keterampilan di bidang teknologi informasi dan menghasilkan solusi digital yang bermanfaat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+        <!-- Left: Bio -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <i class="fas fa-user-astronaut text-blue-400"></i>
+              <span>Tentang Diri Saya</span>
+            </h3>
+
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
+              Perkenalkan, nama saya <strong class="text-white">Ikhsan Mulia Apriana</strong>, lulusan <strong class="text-cyan-400">SMKN 1 Kawali</strong> jurusan <strong class="text-blue-400">Rekayasa Perangkat Lunak (RPL)</strong>.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
+              Saya memiliki kemampuan dalam pengembangan aplikasi dan website. Saya terbiasa menggunakan HTML, CSS, PHP, framework Laravel dan Bootstrap, serta database MySQL. Saya juga menggunakan Git & GitHub, Visual Studio Code, dan Figma sebagai tools pendukung.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Saya memiliki semangat belajar yang tinggi, mampu berpikir logis dan kreatif dalam menyelesaikan masalah, teliti dalam mengerjakan tugas, serta mampu berkolaborasi dan beradaptasi dalam lingkungan kerja.
+            </p>
+          </div>
+
+          <!-- Core Strengths -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+            <div class="glass-card p-5 rounded-2xl text-center group hover:border-blue-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/15 text-blue-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-1">Pemecahan Masalah</h4>
+              <p class="text-xs text-slate-400">Mampu berpikir logis dan kreatif untuk menemukan solusi.</p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl text-center group hover:border-cyan-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/15 text-cyan-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-1">Kolaborasi Tim</h4>
+              <p class="text-xs text-slate-400">Mampu bekerja sama dan berkomunikasi dengan baik.</p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl text-center group hover:border-amber-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 mx-auto flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
+                <i class="fas fa-medal"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-1">Disiplin & Teliti</h4>
+              <p class="text-xs text-slate-400">Teliti dalam menyelesaikan tugas dan bertanggung jawab.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Biodata -->
+        <div class="lg:col-span-5 space-y-4" data-aos="fade-left">
+
+          <div class="glass-card p-6 sm:p-7 rounded-2xl">
+            <h3 class="text-lg font-bold text-white mb-5 flex items-center justify-between">
+              <span>Biodata Pribadi</span>
+              <span class="text-xs px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 font-mono">CV Info</span>
+            </h3>
+
+            <div class="space-y-4 text-sm">
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-user text-slate-500 w-4"></i> Nama Lengkap
+                </span>
+                <span class="font-semibold text-white text-right">Ikhsan Mulia Apriana</span>
+              </div>
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-school text-slate-500 w-4"></i> Asal Sekolah
+                </span>
+                <span class="font-semibold text-cyan-400 text-right">SMKN 1 Kawali</span>
+              </div>
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-laptop-code text-slate-500 w-4"></i> Jurusan
+                </span>
+                <span class="font-semibold text-blue-400 text-right">Rekayasa Perangkat Lunak (RPL)</span>
+              </div>
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-briefcase text-slate-500 w-4"></i> Posisi
+                </span>
+                <span class="font-semibold text-amber-400 text-right">Junior Web Developer</span>
+              </div>
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-phone text-slate-500 w-4"></i> No. HP / WhatsApp
+                </span>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-white text-xs sm:text-sm">088298381231</span>
+                  <button onclick="copyToClipboard('088298381231', 'Nomor HP')" title="Salin No HP" class="text-slate-400 hover:text-cyan-400 text-xs px-1.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-envelope text-slate-500 w-4"></i> Email
+                </span>
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-white text-xs sm:text-sm truncate max-w-[170px]">muliaikhsan41@gmail.com</span>
+                  <button onclick="copyToClipboard('muliaikhsan41@gmail.com', 'Email')" title="Salin Email" class="text-slate-400 hover:text-cyan-400 text-xs px-1.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400 flex items-center gap-2">
+                  <i class="fas fa-map-marker-alt text-slate-500 w-4"></i> Domisili
+                </span>
+                <span class="font-medium text-slate-300 text-right">Kiaralawang, Kawali, Ciamis</span>
+              </div>
+
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="mt-6 pt-5 border-t border-slate-800 flex gap-3">
+              <a href="https://wa.me/6288298381231" target="_blank" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-xs flex items-center justify-center gap-2 transition-all">
+                <i class="fab fa-whatsapp text-sm"></i> Chat Sekarang
+              </a>
+
+              <a href="mailto:muliaikhsan41@gmail.com" class="flex-1 py-2.5 px-3 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 font-medium text-xs flex items-center justify-center gap-2 transition-all">
+                <i class="fas fa-paper-plane text-xs"></i> Kirim Email
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="pendidikan" class="py-20 bg-slate-900/30 relative border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+          JEJAK AKADEMIK
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Pendidikan & <span class="gradient-text">SMKN 1 Kawali</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Riwayat pendidikan formal dan kompetensi Rekayasa Perangkat Lunak.
+        </p>
+      </div>
+
+      <!-- Education Card -->
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-card p-8 sm:p-10 rounded-3xl relative overflow-hidden border border-blue-500/20" data-aos="fade-up">
+
+          <div class="absolute top-0 right-0 transform translate-x-8 translate-y-4 rotate-45 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-[11px] font-bold py-1 px-10 shadow-lg hidden sm:block">
+            LULUS
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white text-3xl shadow-xl shadow-blue-500/30 flex-shrink-0">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-2xl font-extrabold text-white">SMKN 1 Kawali</h3>
+                <span class="px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 text-xs font-semibold">
+                  2024 – 2027
+                </span>
+              </div>
+
+              <div class="text-lg font-semibold text-cyan-400 mb-3">
+                Jurusan: Rekayasa Perangkat Lunak (RPL)
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Saya menempuh pendidikan di SMKN 1 Kawali pada jurusan Rekayasa Perangkat Lunak (RPL) dengan masa pendidikan 2024–2027.
+              </p>
+
+              <!-- Competencies -->
+              <div class="space-y-3 mb-6">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Kompetensi & Keterampilan:</h4>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Bahasa Pemrograman & Web (HTML, CSS, PHP)</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Database (MySQL)</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Framework (Laravel, Bootstrap)</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Tools (Git & GitHub, Visual Studio Code)</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Desain Antarmuka (Figma)</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 text-slate-300">
+                    <i class="fas fa-check-circle text-cyan-400"></i>
+                    <span>Pengembangan Website dan Aplikasi</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Motto -->
+              <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 text-slate-300 text-xs italic flex items-center gap-3">
+                <i class="fas fa-quote-left text-blue-400 text-base flex-shrink-0"></i>
+                <span>"Terus belajar, berpikir kreatif, dan menghasilkan solusi digital yang bermanfaat."</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="keahlian" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+          TECHNICAL & SOFT SKILLS
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Keahlian & <span class="gradient-text">Teknologi</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Keahlian teknis dan nonteknis berdasarkan informasi yang tercantum dalam CV.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Programming -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-code"></i>
+            </div>
+
+            <h3 class="text-lg font-bold text-white mb-2">Bahasa Pemrograman & Web</h3>
+            <p class="text-xs text-slate-400 mb-5">Teknologi yang digunakan untuk membangun halaman dan aplikasi web.</p>
+
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-400"></i> HTML</div>
+              <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-blue-400"></i> CSS</div>
+              <div class="flex items-center gap-2"><i class="fab fa-php text-indigo-400"></i> PHP</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">PHP</span>
+          </div>
+        </div>
+
+        <!-- Framework -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-layer-group"></i>
+            </div>
+
+            <h3 class="text-lg font-bold text-white mb-2">Framework</h3>
+            <p class="text-xs text-slate-400 mb-5">Framework untuk mendukung proses pengembangan aplikasi dan tampilan web.</p>
+
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-center gap-2"><i class="fab fa-laravel text-red-400"></i> Laravel</div>
+              <div class="flex items-center gap-2"><i class="fab fa-bootstrap text-purple-400"></i> Bootstrap</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800">
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-database"></i>
+            </div>
+
+            <h3 class="text-lg font-bold text-white mb-2">Database</h3>
+            <p class="text-xs text-slate-400 mb-5">Pengelolaan dan penyimpanan data untuk kebutuhan aplikasi.</p>
+
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-center gap-2"><i class="fas fa-database text-cyan-400"></i> MySQL</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800">
+            <span class="tech-tag">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Tools & Soft Skills -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-toolbox"></i>
+            </div>
+
+            <h3 class="text-lg font-bold text-white mb-2">Tools & Soft Skills</h3>
+            <p class="text-xs text-slate-400 mb-5">Perangkat pendukung dan kemampuan nonteknis.</p>
+
+            <div class="space-y-2 text-sm text-slate-300">
+              <div>Git & GitHub</div>
+              <div>Visual Studio Code</div>
+              <div>Figma</div>
+              <div class="pt-2 border-t border-slate-800">Komunikasi baik</div>
+              <div>Kolaborasi tim</div>
+              <div>Pemecahan masalah</div>
+              <div>Disiplin & mudah beradaptasi</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-1.5 mt-6 pt-4 border-t border-slate-800">
+            <span class="tech-tag">Git & GitHub</span>
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">Figma</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & PROJECTS SECTION -->
+  <section id="project" class="py-24 bg-slate-900/40 relative border-t border-slate-800/80 scroll-mt-10">
+    <span id="proyek" class="sr-only"></span>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+          PENGALAMAN
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Pengalaman & <span class="gradient-text">Project</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Berikut pengalaman pengembangan website yang tercantum dalam CV.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Company Profile Project -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="p-6 bg-gradient-to-r from-blue-900/40 via-indigo-900/30 to-slate-900 border-b border-slate-800 relative">
+
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20 flex items-center gap-1.5">
+                  <i class="fas fa-globe text-blue-400"></i> Pengalaman
+                </span>
+                <span class="text-xs text-slate-400">September 2026</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                Membuat Web Company Profile
+              </h3>
+
+              <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Membuat website company profile sebagai media informasi dan promosi perusahaan yang menampilkan profil, visi misi, layanan, serta informasi kontak. Proyek ini menerapkan HTML, CSS, JavaScript, dan pengembangan website untuk menghasilkan tampilan yang informatif, menarik, dan responsif.
+              </p>
+            </div>
+
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <ul class="text-xs text-slate-300 space-y-2 mb-4">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Menampilkan profil, visi misi, dan layanan perusahaan
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Menyediakan informasi kontak dan tampilan responsif
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 flex items-center justify-between gap-3 mt-auto">
+            <span class="text-xs font-semibold text-blue-400">Company Profile Website</span>
+            <a href="https://wa.me/6288298381231" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs font-medium transition-all">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Cashier System Project -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="p-6 bg-gradient-to-r from-emerald-900/40 via-teal-900/30 to-slate-900 border-b border-slate-800 relative">
+
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 flex items-center gap-1.5">
+                  <i class="fas fa-cash-register text-emerald-400"></i> Pengalaman
+                </span>
+                <span class="text-xs text-slate-400">Januari 2026</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                Membuat Web Sistem Kasir
+              </h3>
+
+              <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Mengembangkan aplikasi web kasir untuk mempermudah proses transaksi penjualan, pengelolaan data produk, pencatatan pembayaran, serta pembuatan laporan penjualan.
+              </p>
+            </div>
+
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+
+              <ul class="text-xs text-slate-300 space-y-2 mb-4">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Mempermudah transaksi penjualan dan pencatatan pembayaran
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Mengelola data produk dan laporan penjualan
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 flex items-center justify-between gap-3 mt-auto">
+            <span class="text-xs font-semibold text-emerald-400">Web Cashier System</span>
+            <a href="https://wa.me/6288298381231" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-medium transition-all">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+                <!-- Akuntansi System Project -->
+        <div class="project-card glass-card rounded-2xl overflow-hidden group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="p-6 bg-gradient-to-r from-emerald-900/40 via-teal-900/30 to-slate-900 border-b border-slate-800 relative">
+
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 flex items-center gap-1.5">
+                  <i class="fas fa-cash-register text-emerald-400"></i> Pengalaman
+                </span>
+                <span class="text-xs text-slate-400">  - 2025</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                Membuat Web Pembukuan akuntansi
+              </h3>
+
+              <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Mengembangkan aplikasi Pembukuan Akuntansi untuk mempermudah proses pendataan pemasukan , pengeluaran dan juga kas
+              </p>
+            </div>
+
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+
+              <ul class="text-xs text-slate-300 space-y-2 mb-4">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Mempermudah pendataan keuangan
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-emerald-400"></i>
+                  Mengelola data keuangan 
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 border-t border-slate-800/80 flex items-center justify-between gap-3 mt-auto">
+            <span class="text-xs font-semibold text-emerald-400">Web pembukuan Akuntansi</span>
+            <a href="https://wa.me/6288298381231" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-medium transition-all">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATION SECTION -->
+  <section id="sertifikasi" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+          SERTIFIKASI
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Uji Kompetensi <span class="gradient-text">Keahlian</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Pengalaman sertifikasi yang tercantum dalam CV.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto glass-card p-8 sm:p-10 rounded-3xl border border-cyan-500/20" data-aos="fade-up">
+        <div class="flex flex-col sm:flex-row items-start gap-6">
+
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-500 flex items-center justify-center text-white text-3xl flex-shrink-0">
+            <i class="fas fa-award"></i>
+          </div>
+
+          <div class="flex-1">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 class="text-xl sm:text-2xl font-extrabold text-white">
+                Mengikuti Uji Kompetensi Keahlian (UKK)
+              </h3>
+
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
+                September 2026
+              </span>
+            </div>
+
+            <p class="text-cyan-400 font-semibold mb-3">
+              SMKN 1 Kawali — Rekayasa Perangkat Lunak
+            </p>
+
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Mengikuti Uji Kompetensi Keahlian (UKK) Rekayasa Perangkat Lunak untuk mengukur kemampuan dalam pemrograman, pengembangan aplikasi dan website, serta penerapan keterampilan sesuai standar kompetensi keahlian.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="kontak" class="py-24 relative border-t border-slate-800/80 bg-slate-950/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+          HUBUNGI SAYA
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Mari Terhubung <span class="gradient-text">Bersama</span>
+        </h2>
+
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Hubungi saya untuk informasi lebih lanjut, kesempatan kerja, atau diskusi mengenai pengembangan website dan aplikasi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+        <!-- Left: Contact Information -->
+        <div class="lg:col-span-5 space-y-4" data-aos="fade-right">
+
+          <!-- WhatsApp -->
+          <div class="glass-card p-6 rounded-2xl flex items-start justify-between gap-4 border-l-4 border-emerald-500">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl flex-shrink-0">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+
+              <div>
+                <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block">WhatsApp / Telepon</span>
+                <span class="text-base sm:text-lg font-bold text-white font-mono block mt-0.5">0882-9838-1231</span>
+                <span class="text-xs text-slate-400">Hubungi melalui telepon atau WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <a href="https://wa.me/6288298381231" target="_blank" class="w-8 h-8 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center text-xs transition-colors" title="Buka WhatsApp">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+
+              <button onclick="copyToClipboard('088298381231', 'Nomor WhatsApp')" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-xs transition-colors" title="Salin Nomor">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="glass-card p-6 rounded-2xl flex items-start justify-between gap-4 border-l-4 border-cyan-500">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl flex-shrink-0">
+                <i class="fas fa-envelope"></i>
+              </div>
+
+              <div>
+                <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block">Email</span>
+                <span class="text-xs sm:text-sm font-bold text-white font-mono block mt-0.5 break-all">muliaikhsan41@gmail.com</span>
+                <span class="text-xs text-slate-400">Untuk komunikasi profesional dan kesempatan kerja</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <a href="mailto:muliaikhsan41@gmail.com" class="w-8 h-8 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white flex items-center justify-center text-xs transition-colors" title="Kirim Email">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+
+              <button onclick="copyToClipboard('muliaikhsan41@gmail.com', 'Alamat Email')" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-xs transition-colors" title="Salin Email">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- School & Location -->
+          <div class="glass-card p-6 rounded-2xl flex items-start gap-4 border-l-4 border-blue-500">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <div>
+              <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block">Sekolah / Lokasi</span>
+              <span class="text-base font-bold text-white block mt-0.5">SMKN 1 Kawali</span>
+              <p class="text-xs text-slate-400 mt-1">Kiaralawang, Kawali, Ciamis</p>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
+            <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-3">
+              Profil Profesional & Media Sosial
+            </span>
+
+            <div class="flex flex-wrap gap-3 text-sm">
+              <a href="https://www.linkedin.com/in/ikhsan-mulia-apriana-298465449/" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-blue-200">
+                <i class="fab fa-linkedin mr-1"></i> LinkedIn
+              </a>
+
+              <a href="https://github.com/isanniebouz" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-white">
+                <i class="fab fa-github mr-1"></i> GitHub
+              </a>
+
+              <a href="https://www.instagram.com/isannmllr_/" target="_blank" rel="noopener noreferrer" class="text-pink-300 hover:text-pink-200">
+                <i class="fab fa-instagram mr-1"></i> Instagram
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="lg:col-span-7" data-aos="fade-left">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800">
+
+            <h3 class="text-xl font-bold text-white mb-2">Kirim Pesan</h3>
+
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">
+              Isi formulir di bawah ini untuk mengirimkan pesan otomatis melalui WhatsApp atau aplikasi Email Anda.
+            </p>
+
+            <form id="contact-form" class="space-y-4">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="contact-name">
+                    Nama Lengkap *
+                  </label>
+
+                  <input
+                    type="text"
+                    id="contact-name"
+                    required
+                    placeholder="Contoh: Budi Santoso"
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-600"
+                  >
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="contact-info">
+                    Email atau No. WhatsApp
+                  </label>
+
+                  <input
+                    type="text"
+                    id="contact-info"
+                    placeholder="Contoh: 0812xxxx atau email@anda.com"
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-600"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="contact-subject">
+                  Perihal / Subjek
+                </label>
+
+                <input
+                  type="text"
+                  id="contact-subject"
+                  placeholder="Contoh: Tawaran Magang PKL / Pertanyaan Proyek"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-600"
+                >
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="contact-message">
+                  Isi Pesan *
+                </label>
+
+                <textarea
+                  id="contact-message"
+                  rows="4"
+                  required
+                  placeholder="Tuliskan pesan, pertanyaan, atau detail kolaborasi Anda di sini..."
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-600"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  type="button"
+                  id="send-wa-btn"
+                  class="flex-1 py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition-all"
+                >
+                  <i class="fab fa-whatsapp text-lg"></i>
+                  <span>Kirim via WhatsApp</span>
+                </button>
+
+                <button
+                  type="button"
+                  id="send-email-btn"
+                  class="flex-1 py-3 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/25 flex items-center justify-center gap-2 transition-all"
+                >
+                  <i class="fas fa-envelope text-sm"></i>
+                  <span>Kirim via Email</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-slate-800 bg-[#080b12] text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-sm">
+            IMA
+          </div>
+
+          <div>
+            <span class="text-white font-bold block">Ikhsan Mulia Apriana</span>
+            <span class="text-xs text-slate-500">Lulusan SMKN 1 Kawali</span>
+          </div>
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+          <a href="#beranda" class="hover:text-blue-400 transition-colors">Beranda</a>
+          <a href="#tentang" class="hover:text-blue-400 transition-colors">Tentang</a>
+          <a href="#keahlian" class="hover:text-blue-400 transition-colors">Keahlian</a>
+          <a href="#project" class="hover:text-blue-400 transition-colors">Project</a>
+          <a href="#kontak" class="hover:text-blue-400 transition-colors">Kontak</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-xs text-slate-500">
+          &copy; 2024 – 2027 Ikhsan Mulia Apriana. Dibuat dengan semangat RPL
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    href="https://wa.me/6288298381231?text=Halo%20Ikhsan,%20saya%20menghubungi%20lewat%20tombol%20cepat%20di%20website%20portfolio%20kamu!"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat WhatsApp Langsung"
+    class="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all"
+    title="Chat WhatsApp Langsung"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- BACK TO TOP BUTTON -->
+  <a
+    href="#beranda"
+    id="back-to-top"
+    aria-label="Kembali ke atas"
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-slate-800/90 hover:bg-blue-600 text-white flex items-center justify-center text-sm shadow-xl border border-slate-700 opacity-0 pointer-events-none transition-all duration-300"
+    title="Kembali ke atas"
+  >
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-all duration-300">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+
+      <!-- Close Button -->
+      <button id="modal-close-btn" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fas fa-times text-base"></i>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs uppercase tracking-wider font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20">
+          Detail Proyek
+        </span>
+
+        <h3 id="modal-title" class="text-2xl font-bold text-white mt-2">
+          Judul Proyek
+        </h3>
+      </div>
+
+      <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6"></p>
+
+      <div class="mb-6">
+        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+          Teknologi yang Digunakan:
+        </h4>
+        <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="mb-8">
+        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+          Fitur Utama & Keunggulan:
+        </h4>
+        <ul id="modal-features" class="space-y-2.5"></ul>
+      </div>
+
+      <div class="pt-5 border-t border-slate-800 flex flex-wrap items-center justify-end gap-3">
+        <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors">
+          Tutup
+        </button>
+
+        <a id="modal-demo-link" href="https://wa.me/6288298381231" target="_blank" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fab fa-whatsapp"></i>
+          <span>Konsultasi Proyek</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+
+  <!-- Custom Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
